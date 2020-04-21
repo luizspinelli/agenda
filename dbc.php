@@ -1,6 +1,6 @@
 <?php
 
-function conecta($banco,$dns="localhost",$user="root",$senha="1123")
+function conecta($banco,$dns="localhost",$user="root",$senha="")
 {
     $conn = mysqli_connect($dns,$user,$senha,$banco);
 
