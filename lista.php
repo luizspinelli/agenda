@@ -14,7 +14,7 @@ $tabela = 'contatos';
 
 $usuario = $_SESSION['logado'];
 
-$select = mysqli_query($conn, "SELECT * FROM $banco.$tabela WHERE id_usuario='$usuario';",);
+$select = mysqli_query($conn, "SELECT * FROM $banco.$tabela WHERE id_usuario='$usuario';");
 
 if (mysqli_close($conn)) {
     unset($conn);
