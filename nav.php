@@ -17,7 +17,7 @@ $n = $_SESSION['usuario'];
 </head>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="./lista.php"><?php echo "Agenda $n" ?></a>
+    <a class="navbar-brand" href="/lista.php"><?php echo "Agenda $n" ?></a>
     <div class="collapse navbar-collapse">
         <?php
 
@@ -25,13 +25,13 @@ $n = $_SESSION['usuario'];
             echo '                
                 <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a href="./lista.php" class="nav-link">Lista</a>
+                    <a href="/lista.php" class="nav-link">Lista</a>
                 </li>
                     <li class="nav-item">
-                        <a href="./cadastro.php" class="nav-link">Cadastro</a>
+                        <a href="/cadastro.php" class="nav-link">Cadastro</a>
                     </li>
                     <li class="nav-item">
-                        <a href="./sair.php" class="nav-link">Sair</a>
+                        <a href="/sair.php" class="nav-link">Sair</a>
                     </li>
                 </ul>
                 
