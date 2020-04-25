@@ -1,6 +1,6 @@
 <?php
 
-function conecta($banco,$dns="database-1.cnq400r5oy6v.us-east-1.rds.amazonaws.com",$user="admin",$senha="12345678")
+function conecta($banco,$dns="localhost",$user="root",$senha="1123")
 {
     $conn = mysqli_connect($dns,$user,$senha,$banco);
 

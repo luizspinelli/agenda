@@ -40,35 +40,38 @@ if (isset($insert)) {
 ?>
 
 <body class="text-center">
-    <div class="container center mt-3">
-        <div class="card col-10">
-            <div class="card-header text-center">Contato</div>
+    <div class="container-fluid mt-3">
+        <div class="card">
             <div class="card-body">
-                <table class="table">
-                    <thead class="thead">
-                        <tr>
-                            <th>Contato</th>
-                            <th>Telefone</th>
-                            <th>Email</th>
-                            <th>Alterar</th>
-                            <th>Excluir</th>
-                        </tr>
-                    </thead>
-                    <?php
-                    while ($resultado = mysqli_fetch_assoc($select)) {
-                        echo "<tr>";
-                        echo "<td>{$resultado['contato']}</td>";
-                        echo "<td>{$resultado['telefone']}</td>";
-                        echo "<td>{$resultado['email']}</td>";
-                        echo "<td><a href='cadastro.php?id={$resultado['id_contato']}'>Alterar</a>";
-                        echo "<td><a href='deleta.php?id={$resultado['id_contato']}'>Excluir</a>";
-                        echo "<td></td>";
-                        echo "</tr>";
-                    }
-                    ?>
-                </table>
+                <div class="card-header text-center">Contato</div>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead class="thead">
+                            <tr>
+                                <th scope="col">Contato</th>
+                                <th scope="col">Telefone</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Alterar</th>
+                                <th scope="col">Excluir</th>
+                            </tr>
+                        </thead>
+                        <tbody class="tbody">
+                            <?php
+                                while ($resultado = mysqli_fetch_assoc($select)) {
+                                    echo '<tr>';
+                                    echo "<td scope='row'>{$resultado['contato']}</td>";
+                                    echo "<td scope='row'>{$resultado['telefone']}</td>";
+                                    echo "<td scope='row'>{$resultado['email']}</td>";
+                                    echo "<td scope='row'><a href='cadastro.php?id={$resultado['id_contato']}'>Alterar</a></td>";
+                                    echo "<td scope='row'><a href='deleta.php?id={$resultado['id_contato']}'>Excluir</a></td>";
+                                    echo '</tr>';
+                                }
+                                ?>
+                        </tbody>
+                    </table>
+                </div>
                 <form action="cadastro.php" method="post" class="form-group">
-                    <button class="btn btn-primary col-12">Cadastrar novo contato</button>
+                    <button class="btn btn-primary mt-2 col-sm-12">Cadastrar novo contato</button>
                 </form>
             </div>
         </div>

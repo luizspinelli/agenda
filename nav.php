@@ -16,7 +16,7 @@ $n = $_SESSION['usuario'];
     <title>Agenda</title>
 </head>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand navbar-light bg-light">
     <a class="navbar-brand" href="/lista.php"><?php echo "Agenda $n" ?></a>
     <div class="collapse navbar-collapse">
         <?php

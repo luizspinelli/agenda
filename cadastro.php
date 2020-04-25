@@ -24,25 +24,25 @@ $email = isset($id)?$qry['email']:"";
 
 ?>
 
-<body class="text-center">
-    <div class="container mt-3">
-        <div class="card col-10">
+<body class="">
+    <div class="container-fluid mt-3">
+        <div class="card">
             <div class="card-body">
                 <div class="card-header text-center"><?php echo $nomeForm?></div>
-                <form action="<?php echo $action?>" method="post" class="form-inline col-12">
-                    <div class="form-group col-12 mt-2">
-                        <label for="contato" class="col-4">Contato</label><br>
-                        <input type="text" name="contato" id="contato" class="form-control col-8" required value="<?php echo $contato?>"><br>
+                <form action="<?php echo $action?>" method="post" class="form-inline col-sm-12">
+                    <div class="form-group row col-sm-12 mt-2">
+                        <label for="contato" class="col-sm-2 col-form-label">Contato</label><br>
+                        <input type="text" name="contato" id="contato" class="form-control col-sm-10" required value="<?php echo $contato?>"><br>
                     </div>
-                    <div class="form-group col-12">
-                        <label for="telefone" class="col-4">Telefone</label><br>
-                        <input type="text" name="telefone" id="telefone" class="form-control col-8 mt-2" value="<?php echo $telefone?>"><br>
+                    <div class="form-group row col-sm-12 mt-2">
+                        <label for="telefone" class="col-sm-2 col-form-label">Telefone</label><br>
+                        <input type="text" name="telefone" id="telefone" class="form-control col-sm-10 mt-2" value="<?php echo $telefone?>"><br>
                     </div>
-                    <div class="form-group col-12">
-                        <label for="email" class="col-4">Email</label><br>
-                        <input type="email" name="email" id="email" class="form-control col-8 mt-2" value="<?php echo $email?>"><br>
+                    <div class="form-group row col-sm-12 mt-2">
+                        <label for="email" class="col-sm-2 col-form-label">Email</label><br>
+                        <input type="email" name="email" id="email" class="form-control col-sm-10 mt-2" value="<?php echo $email?>"><br>
                     </div>
-                    <button class="btn btn-secondary col-12 mt-4"><?php echo $btnForm?></button>
+                    <button class="btn btn-secondary col-sm-12 mt-2"><?php echo $btnForm?></button>
                 </form>
             </div>
         </div>
